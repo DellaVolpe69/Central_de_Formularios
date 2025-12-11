@@ -168,11 +168,11 @@ apps = [
         "link": "https://prazosdefaultsla.streamlit.app/"
     },
     {
-        "nome": "Data Início Default SLA"
+        "nome": "Data Início Default SLA",
         "link": "https://datainiciodefaultsla.streamlit.app/"
     },
     {
-        "nome": "Expurgo OP"
+        "nome": "Expurgo OP",
         "link": "https://expurgoop.streamlit.app/"
     },
 ]
