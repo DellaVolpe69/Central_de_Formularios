@@ -163,6 +163,18 @@ apps = [
         "nome": "Exame Médico",
         "link": "https://gestao-documentos-exame-medico.streamlit.app/"
     },
+    {
+        "nome": "Prazos Default SLA",
+        "link": "https://prazosdefaultsla.streamlit.app/"
+    },
+    {
+        "nome": "Data Início Default SLA"
+        "link": "https://datainiciodefaultsla.streamlit.app/"
+    },
+    {
+        "nome": "Expurgo OP"
+        "link": "https://expurgoop.streamlit.app/"
+    },
 ]
 
 # ----------------------------------------------------------
