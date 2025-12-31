@@ -214,6 +214,31 @@ apps_Armazem = [
 # ----------------------------------------------------------
 #  RENDERIZAÇÃO CENTRALIZADA (TUDO NO MEIO)
 # ----------------------------------------------------------
+
+st.markdown("""
+<style>
+/* Container das abas */
+div[data-baseweb="tab-list"] {
+    gap: 10px;
+}
+
+/* Aba normal */
+button[data-baseweb="tab"] {
+    background-color: #f0f2f6;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Aba ativa */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: #1f77b4;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
+
 aba_sla, aba_armazem = st.tabs(["📊 SLA", "📦 Armazém"])
 
 with aba_sla:
