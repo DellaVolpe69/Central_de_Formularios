@@ -209,6 +209,44 @@ apps_Armazem = [
         "nome": "Pendências do Inventário",
         "link": "https://pendenciainventario.streamlit.app/"
     },
+    {
+        "nome": "Formulário RNC",
+        "link": "https://formulariornc.streamlit.app/"
+    },
+    {
+        "nome": "Mapa de Carregamento",
+        "link": "https://mapadecarregamentosap2.streamlit.app/"
+    },
+]
+
+apps_AdmOp = [
+    {
+        "nome": "Excessos de Velocidade (Agregado)",
+        "link": "https://exceapp-velocidade---agregado-nyk3rbwojqjxxaah9wmc2d.streamlit.app/"
+    },
+    {
+        "nome": "Excessos de Velocidade (Frota)",
+        "link": "https://exceapp-velocidade---frotq-k5u89xmcsxbf72rzrtni4q.streamlit.app/"
+    },
+    {
+        "nome": "Licenciamento",
+        "link": "https://formulario-licenciamento-goc7gpt6jnabfv7tknhems.streamlit.app/"
+    },
+    {
+        "nome": "Exame Médico",
+        "link": "https://gestao-documentos-exame-medico.streamlit.app/"
+    },
+    {
+        "nome": "LETPP",
+        "link": "https://dhtq8rvd3wq79a3lrg78gn.streamlit.app/"
+    },
+]
+
+apps_Processos = [
+    {
+        "nome": "Regra de Ouro",
+        "link": "https://regradeouro.streamlit.app/"
+    },
 ]
 
 # ----------------------------------------------------------
@@ -233,13 +271,43 @@ button[data-baseweb="tab"] {
 
 /* Aba ativa */
 button[data-baseweb="tab"][aria-selected="true"] {
-    background-color: #1f77b4;
+    background-color: #FF5D01;
     color: white;
 }
 </style>
 """, unsafe_allow_html=True)
 
-aba_sla, aba_armazem = st.tabs(["📊 SLA", "📦 Armazém"])
+aba_adm, aba_armazem, aba_processos, aba_sla,  = st.tabs(["Adm Operacional", "Armazém", "Processos", "SLA"])
+
+with aba_adm:
+    st.subheader("Aplicações de Adm Operacional")
+
+    col_esq, col_meio, col_dir = st.columns([1, 2, 1])
+
+    with col_meio:
+        for app in apps_AdmOp:
+            criar_card(app["nome"], app["link"])
+            st.markdown("<br>", unsafe_allow_html=True)
+
+with aba_armazem:
+    st.subheader("Aplicações de Armazém")
+
+    col_esq, col_meio, col_dir = st.columns([1, 2, 1])
+
+    with col_meio:
+        for app in apps_Armazem:
+            criar_card(app["nome"], app["link"])
+            st.markdown("<br>", unsafe_allow_html=True)
+            
+with aba_processos:
+    st.subheader("Aplicações de Processos")
+
+    col_esq, col_meio, col_dir = st.columns([1, 2, 1])
+
+    with col_meio:
+        for app in apps_Processos:
+            criar_card(app["nome"], app["link"])
+            st.markdown("<br>", unsafe_allow_html=True)
 
 with aba_sla:
     st.subheader("Aplicações de SLA")
@@ -251,15 +319,7 @@ with aba_sla:
             criar_card(app["nome"], app["link"])
             st.markdown("<br>", unsafe_allow_html=True)
             
-with aba_armazem:
-    st.subheader("Aplicações de Armazém")
 
-    col_esq, col_meio, col_dir = st.columns([1, 2, 1])
-
-    with col_meio:
-        for app in apps_Armazem:
-            criar_card(app["nome"], app["link"])
-            st.markdown("<br>", unsafe_allow_html=True)
 
 # ----------------------------------------------------------
 #  RODAPÉ
@@ -269,7 +329,7 @@ with aba_armazem:
 def rodape():
     st.markdown("""
         <div class="footer">
-            © 2025 <b>Della Volpe</b> | Desenvolvido por <a href="#">Raphael Chiavegati Oliveira</a>
+            © 2026 <b>Della Volpe</b> | Desenvolvido por <a href="#">Raphael Chiavegati Oliveira</a>
         </div>
     """, unsafe_allow_html=True)
     
