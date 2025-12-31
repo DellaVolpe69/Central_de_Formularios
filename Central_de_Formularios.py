@@ -142,40 +142,6 @@ def criar_card(texto_botao, link):
 # LISTA AUTOMÁTICA DE FORMULÁRIOS
 # (⭐ Basta ADICIONAR aqui novos formulários!)
 # ----------------------------------------------------------
-apps = [
-    {
-        "nome": "Cadastro de Janelas",
-        "link": "https://formulariojanelas.streamlit.app/"
-    },
-    {
-        "nome": "Cadastro de Feriados/ Inventário",
-        "link": "https://formularioferiadoinventario.streamlit.app/"
-    },
-    {
-        "nome": "Prioridades",
-        "link": "https://priorizanfs.streamlit.app/"
-    },
-    {
-        "nome": "Formulário RNC",
-        "link": "https://formulariornc.streamlit.app/"
-    },
-    {
-        "nome": "Exame Médico",
-        "link": "https://gestao-documentos-exame-medico.streamlit.app/"
-    },
-    {
-        "nome": "Prazos Default SLA",
-        "link": "https://prazosdefaultsla.streamlit.app/"
-    },
-    {
-        "nome": "Data Início Default SLA",
-        "link": "https://datainiciodefaultsla.streamlit.app/"
-    },
-    {
-        "nome": "Expurgo OP",
-        "link": "https://expurgoop.streamlit.app/"
-    },
-]
 
 apps_SLA = [
     {
