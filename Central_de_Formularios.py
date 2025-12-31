@@ -177,6 +177,40 @@ apps = [
     },
 ]
 
+apps_SLA = [
+    {
+        "nome": "Cadastro de Janelas",
+        "link": "https://formulariojanelas.streamlit.app/"
+    },
+    {
+        "nome": "Cadastro de Feriados/ Inventário",
+        "link": "https://formularioferiadoinventario.streamlit.app/"
+    },
+    {
+        "nome": "Prioridades",
+        "link": "https://priorizanfs.streamlit.app/"
+    },
+    {
+        "nome": "Prazos Default SLA",
+        "link": "https://prazosdefaultsla.streamlit.app/"
+    },
+    {
+        "nome": "Data Início Default SLA",
+        "link": "https://datainiciodefaultsla.streamlit.app/"
+    },
+    {
+        "nome": "Expurgo OP",
+        "link": "https://expurgoop.streamlit.app/"
+    },
+]
+
+apps_Armazem = [
+    {
+        "nome": "Pendências do Inventário",
+        "link": "https://pendenciainventario.streamlit.app/"
+    },
+]
+
 # ----------------------------------------------------------
 #  RENDERIZAÇÃO CENTRALIZADA (TUDO NO MEIO)
 # ----------------------------------------------------------
@@ -188,7 +222,7 @@ with aba_sla:
     col_esq, col_meio, col_dir = st.columns([1, 2, 1])
 
     with col_meio:
-        for app in apps:
+        for app in apps_SLA:
             criar_card(app["nome"], app["link"])
             st.markdown("<br>", unsafe_allow_html=True)
             
@@ -198,7 +232,7 @@ with aba_armazem:
     col_esq, col_meio, col_dir = st.columns([1, 2, 1])
 
     with col_meio:
-        for app in apps:
+        for app in apps_Armazem:
             criar_card(app["nome"], app["link"])
             st.markdown("<br>", unsafe_allow_html=True)
 
