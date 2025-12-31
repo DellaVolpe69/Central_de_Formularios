@@ -180,12 +180,27 @@ apps = [
 # ----------------------------------------------------------
 #  RENDERIZAÇÃO CENTRALIZADA (TUDO NO MEIO)
 # ----------------------------------------------------------
-col_esq, col_meio, col_dir = st.columns([1, 2, 1])
+aba_sla, aba_armazem = st.tabs(["📊 SLA", "📦 Armazém"])
 
-with col_meio:
-    for app in apps:
-        criar_card(app["nome"], app["link"])
-        st.markdown("<br>", unsafe_allow_html=True)
+with aba_sla:
+    st.subheader("Aplicações de SLA")
+
+    col_esq, col_meio, col_dir = st.columns([1, 2, 1])
+
+    with col_meio:
+        for app in apps:
+            criar_card(app["nome"], app["link"])
+            st.markdown("<br>", unsafe_allow_html=True)
+            
+with aba_armazem:
+    st.subheader("Aplicações de Armazém")
+
+    col_esq, col_meio, col_dir = st.columns([1, 2, 1])
+
+    with col_meio:
+        for app in apps:
+            criar_card(app["nome"], app["link"])
+            st.markdown("<br>", unsafe_allow_html=True)
 
 # ----------------------------------------------------------
 #  RODAPÉ
